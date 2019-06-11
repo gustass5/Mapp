@@ -1,0 +1,624 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: nameFont;
+    src: url(name.ttf);
+}
+
+@font-face {
+    font-family: mainFont;
+    src: url(main.ttf);
+}
+
+@font-face {
+    font-family: todoFont;
+    src: url(todo.otf);
+}
+
+@font-face {
+    font-family: headerFont;
+    src: url(header.otf);
+}
+
+#body{
+    background-image: url('backgroundImage.png');
+    font-family: mainFont;
+}
+
+#root{
+    height: 100vh;
+}
+
+#app{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.app{
+    //background-color: rgba(12,6,12, 0.5);
+}
+/*/?-_-?:Home:?-_-?/*/
+
+.home{
+    width: 100%;
+    height: 424px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: nameFont;
+    font-size: 80px;
+    color: rgb(210,0,60);
+    background-color: rgba(6,6,12, 0.7);
+}
+
+/*/?-_-?:MainSidebar:?-_-?/*/
+
+.mainHeader{
+    float: left;
+    width: 80%;
+    height: 10%;
+    font-family: headerFont;
+    font-size: 19px;
+    color: rgb(210,0,60);
+    background-color: rgba(6,6,12, 0.7);
+    border-bottom: 2px solid rgb(210,0,60);
+}
+
+/*/?-_-?:MainSidebar:?-_-?/*/
+
+.mainSidebar{
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: rgba(6,6,12, 0.7);
+}
+
+.placeholder01{
+    padding-left: 20px;
+    height: 10%;
+    color:rgb(210,0,60);
+    font-family: nameFont;
+    font-size: 60px;
+    border-bottom: 2px solid rgb(210,0,60);
+    user-select: none;
+    cursor: default;
+}
+
+.sidebarComponents{
+    padding-top: 10px;
+}
+
+.sidebarComponent{
+    height: 40px;
+    color: rgb(255,255,255);
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    //border-bottom: 2px solid grey;
+}
+
+.sidebarElement{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+.sidebarElement.active{
+    background-color: rgb(210,0,60);
+    color: black;
+}
+
+.sidebarElement.active #home{
+    background-image: url('homeb.png');
+}
+
+.sidebarElement.active #todoList{
+    background-image: url('listb.png');
+}
+
+.sidebarElement.active #workouts{
+    background-image: url('workoutb.png');
+}
+
+.sidebarElement.active #projects{
+    background-image: url('projectb.png');
+}
+
+
+.sidebarElement:hover{
+    background-color: rgb(210,0,60);
+    color: black;
+    cursor: pointer;
+}
+
+.sidebarElement:hover #home{
+    background-image: url('homeb.png');
+}
+
+.sidebarElement:hover #todoList{
+    background-image: url('listb.png');
+}
+
+.sidebarElement:hover #workouts{
+    background-image: url('workoutb.png');
+}
+
+.sidebarElement:hover #projects{
+    background-image: url('projectb.png');
+}
+
+.iconPlaceholder{
+    height: 24px;
+    width: 24px;
+    margin-left: 5px;
+}
+#home{
+    background-image: url('home.png');
+}
+
+#todoList{
+    background-image: url('list.png');
+}
+
+#workouts{
+    background-image: url('workout.png');
+}
+
+#projects{
+    background-image: url('project.png');
+}
+
+.sidebarElement .item{
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+/*/?-_-?:Content:?-_-?/*/
+
+.content{
+    height: 424px;
+    width: 80%;
+    float: left;
+    background-color: rgba(20,20,24, 0.5);
+
+}
+
+/*/?-_-?:TodoList:?-_-?/*/
+.todoList{
+    height: 100%;
+}
+
+.todoListSidebar{
+    width: 20%;
+    height: 414px;
+    float: left;
+    padding-top: 10px;
+    background-color: rgba(6,6,12, 0.4);
+}
+
+.todoListSidebarContent{
+    padding-top: 10px;
+    width: 100%;
+}
+
+.todoBtn{
+    width: 100%;
+}
+
+.addTodoButton{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: todoFont;
+    font-size: 25px;
+    color: rgb(210,0,60);
+    border-bottom: 2px solid rgb(210,0,60);
+    user-select: none;
+}
+
+.addTodoButton:hover{
+    color: rgb(255,10,81);
+    cursor: pointer;
+}
+
+.addTodoButton:active{
+    color: black;
+}
+
+
+.todoListSidebarElement{
+    border-bottom: 2px solid rgb(210,0,60);
+    padding-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    color: rgb(210,0,60);
+    user-select: none;
+}
+
+.todoListSidebarElement:hover{
+    color: rgb(255,10,81);
+    border-color: rgb(255,10,81);
+    cursor: pointer;
+}
+
+.itemsCount{
+    float: right;
+}
+.todoListContent{
+    background-color: rgba(20,20,24, 0.5);
+    height: 424px;
+    width: 80%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.todoListContentComponent{
+    width: 295px;
+    height: 200px;
+    margin-top: 5px;
+    float: left;
+    background-color: rgba(20,20,20, 0.8);
+    border: 2px solid rgb(210,0,60);
+}
+
+.todoListContentComponentHeader{
+    margin: 0px 10px;
+    height: 12%;
+    border-bottom: 2px solid rgb(210,0,60);
+}
+
+.todoListInputHeader{
+    background: none;
+    border: none;
+    float: left;
+    width: 90%;
+    height: 20px;
+    padding-left: 5px;
+    margin-top: 5px;
+    font-family: mainFont;
+    font-size: 20px;
+    color: #909090;
+}
+
+.todoListDeleteElement{
+    background-image: url('xp.png');
+    margin-top: 4px;
+    width: 16px;
+    height: 16px;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+
+.todoListDeleteElement:hover{
+    background-image: url('x.png');
+    cursor: pointer;
+}
+
+.todoListContentComponentSidebar{
+    width: 24px;
+    margin: 20px 10px 0px 10px;
+    float: left;
+}
+
+.todoListDoneElement{
+    background-image: url('check.png');
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.todoListDoneElement:hover{
+    cursor: pointer;
+}
+
+.todoListIsDoneElement{
+    background-image: url('checkw.png');
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+}
+
+.todoListIsDoneElement:hover{
+    cursor: pointer;
+}
+
+.todoListProgressElement{
+    background-image: url('progress.png');
+    width: 24px;
+    height: 24px;
+    margin-bottom: 15px;
+}
+
+.todoListInProgressElement{
+    background-image: url('progressw.png');
+    width: 24px;
+    height: 24px;
+    margin-bottom: 15px;
+}
+
+.todoListInProgressElement:hover{
+    cursor: pointer;
+}
+
+.todoListProgressElement:hover{
+    cursor: pointer;
+}
+
+.todoListFutureElement{
+    background-image: url('future.png');
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.todoListInFutureElement{
+    background-image: url('futurew.png');
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.todoListInFutureElement:hover{
+    cursor: pointer;
+}
+
+.todoListFutureElement:hover{
+    cursor: pointer;
+}
+
+.todoListContentComponentElement{
+    float: left;
+    margin-top: 10px;
+    width: 251px;
+}
+
+.todoListInputContent{
+    border: none;
+    color: #909090;
+    background: none;
+    font-family: mainFont;
+    resize: none;
+}
+
+input:focus {
+    outline: none !important;
+}
+textarea:focus {
+    outline: none !important;
+}
+
+/*/?-_-?:Workouts:?-_-?/*/
+
+.workout .sidebar{
+    width: 20%;
+    height: 414px;
+    float: left;
+    padding-top: 10px;
+    background-color: rgba(6,6,12, 0.4);
+    overflow-y: auto;
+}
+
+.addType{
+    font-family: todoFont;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(210,0,60);
+    border-bottom: 2px solid rgb(210,0,60);
+    user-select: none;
+}
+.addType:hover{
+    color: rgb(255,10,81);
+    cursor: pointer;
+}
+
+.element .input{
+    width: 80%;
+    height: 25px;
+    padding: 5px 0px;
+    padding-left: 5px;
+    background: none;
+    border: none;
+    color: #909090;
+    font-family: mainFont;
+    font-size: 20px;
+    border-bottom: 2px solid rgb(210,0,60);
+    user-select: none;
+}
+
+
+.workoutCloseBtn.type{
+    background-image: url('x.png');
+    margin-top: 10px;
+    margin-right: 5px;
+    float: right;
+    width: 16px;
+    height: 16px;
+    user-select: none;
+}
+
+.workoutCloseBtn.type:hover{
+    background-image: url('xp.png');
+    cursor: pointer;
+}
+
+.addWorkout{
+    height: 42px;
+    float: left;
+    display: flex;
+    padding: 5px 0px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 7px;
+    font-family: todoFont;
+    font-size: 20px;
+    color: rgb(210,0,60);
+    user-select: none;
+}
+
+.addWorkout:hover{
+    color: rgb(255,10,81);
+    cursor: pointer;
+}
+
+.element .sidebar{
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+.workoutName{
+    padding-left: 5px;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    font-family: mainFont;
+    font-size: 16px;
+    color: #909090;
+    width: 70%;
+    margin-left: 10px;
+    border-left: 2px solid rgb(255,10,81);
+    user-select: none;
+}
+
+.workoutName:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.workoutCloseBtn{
+    float: right;
+    margin-right: 5px;
+    user-select: none;
+}
+
+.workoutCloseBtn:hover{
+    cursor: pointer;
+}
+
+.workoutContent{
+    width: 100%;
+    height: 98%;
+    border: none;
+    color: #909090;
+    background: none;
+    font-family: mainFont;
+    font-size: 19px;
+    resize: none;
+}
+
+/*/?-_-?:Projects:?-_-?/*/
+.projects .sidebar{
+    width: 20%;
+    height: 414px;
+    float: left;
+    padding-top: 10px;
+    background-color: rgba(6,6,12, 0.4);
+    overflow-y: auto;
+}
+
+.projectBtn{
+    font-family: todoFont;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(210,0,60);
+    border-bottom: 2px solid rgb(210,0,60);
+    user-select: none;
+}
+
+.projectBtn:hover{
+    color: rgb(255,10,81);
+    cursor: pointer;
+    user-select: none;
+}
+
+.projectInputHeader{
+    width: 80%;
+    height: 25px;
+    padding: 5px 0px;
+    padding-left: 5px;
+    background: none;
+    border: none;
+    color: #909090;
+    font-family: mainFont;
+    font-size: 20px;
+    border-bottom: 2px solid rgb(210,0,60);
+    user-select: none;
+}
+
+.deleteBtn{
+    background-image: url('x.png');
+    margin-top: 10px;
+    margin-right: 5px;
+    float: right;
+    width: 16px;
+    height: 16px;
+    user-select: none;
+}
+
+.deleteBtn:hover{
+    background-image: url('xp.png');
+    cursor: pointer;
+}
+
+.projectContent{
+    width: 100%;
+    height: 98%;
+    border: none;
+    color: #909090;
+    background: none;
+    font-family: mainFont;
+    font-size: 19px;
+    resize: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #101010;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

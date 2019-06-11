@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src='youtube-player.js'></script>
+    </head>
+    <body>
+            <div id="root"></div>
+            <div id='player-1'></div>
+    </body>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/youtube-player@5.5.1/dist/index.js" crossorigin></script>
+    <script src = "https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type = "text/babel">
+        // const songPlayElement = document.getElementById("root");
+        //
+        // var player = _YoutubePlayer("video-player");
+        //
+        // player.loadVideoById("hUOuNzo2WQQ");
+        // player.playVideo();
+
+        //const element = <iframe width="560" height="315" src="https://www.youtube.com/embed/hUOuNzo2WQQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>;
+        //const element2 = <iframe width="560" height="315" src="https://www.youtube.com/embed/QI6vi4Bcvic?controls=0?rel=0&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        //ReactDOM.render(element2, songPlayElement);
+    </script>
+
+    <script>
+    var player1,
+        firstStateChange;
+    player1 = YouTubePlayer('player-1', {
+        videoId: 'hUOuNzo2WQQ'
+    });
+    player1
+        // Play video is a Promise.
+        // 'playVideo' is queued and will execute as soon as player is ready.
+        .playVideo()
+        .then(function () {
+            console.log('Starting to play player1. It will take some time to buffer video before it starts playing.');
+        });
+    </script>
+</html>

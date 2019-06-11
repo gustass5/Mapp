@@ -1,0 +1,460 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: theFont;
+    src: url(Outage.ttf);
+}
+
+#body{
+    background-image: url('backgroundImage.png');
+}
+
+#root{
+    height: 100%;
+}
+
+#app{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.content{
+    background: rgba(6,6,16, .75);
+    width: 80%;
+    height: 90%;
+    float: left;
+}
+
+.placeholder01{
+    width: 20%;
+    height: 10%;
+    max-height: 50px;
+    float: left;
+    background: rgba(6,6,16, .75);
+    border-right: 2px solid rgb(82,0,154);
+    border-bottom: 2px solid rgb(82,0,154);
+}
+
+.navigation{
+    margin: 0px;
+    padding-left: 10px;
+    color: white;
+    width: 80%;
+    height: 10%;
+    max-height: 50px;
+    float: left;
+    display: flex;
+    align-items: center;
+    background: rgba(6,6,16, .75);
+    border-bottom: 2px solid rgb(82,0,154);
+}
+.navComponent{
+    background-image: url('backgroundImage.png');
+    width: 100px;
+    height: 100%;
+    margin-right: 20px;
+    border: 2px solid rgb(82,0,154);
+    border-bottom: none;
+    margin-bottom: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navComponent:hover{
+        background: rgba(6,6,16, .75);
+}
+.navElement{
+    font-family: theFont;
+    color: rgb(82,0,154);
+}
+
+.mainSidebar{
+    width: 20%;
+    height: 90%;
+
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+    background: rgba(6,6,12, .75);
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+
+    border-right: 2px solid rgb(82,0,154);
+}
+
+.sidebarComponent{
+    width: 100%;
+    display: flex;
+    align-items: left;
+    padding-right: 15px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.sidebarElement:hover .itemClass{
+    color: white;
+    background: none;
+}
+
+.sidebarElement:hover{
+    background-color: rgba(148, 0, 221, .1);
+    background-color: rgba(82,0,154, .1);
+}
+
+.sidebarElement{
+    width: 100%;
+    height: 50px;
+    border: 2px solid;
+    border-color: rgb(148,0,221);
+    border-color: rgb(82,0,154);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.iconPlaceholder{
+    width: 32px;
+    height: 32px;
+    margin: 7px;
+    float: left;
+}
+
+.itemClass{
+    width: 70%;
+    float: left;
+    margin: 0px;
+    font-family: theFont;
+    color: rgb(148,0,221);
+    color: rgb(108,30,224);
+}
+
+@media only screen and (min-width: 1250px){
+    /* .placeholder01{
+        width: 13%;
+    }
+    .navigation{
+        width: 87%;
+    } */
+    .mainSidebar{
+        width: 13%;
+    }
+    .content{
+        width: 87%;
+    }
+}
+
+/* //Todo List CSS */
+
+.todoList{
+    height: 100%;
+}
+
+.todoListSidebar{
+    width: 25%;
+    height: 100%;
+    float: left;
+    border-right: 2px solid rgb(82,0,154);
+    border-bottom: 2px solid rgb(82,0,154);
+}
+
+.todoListHeader{
+    color: rgb(82,0,154);
+    margin: 10px;
+    padding-left: 5px;
+    border-bottom: 3px solid rgb(82,0,154);
+}
+
+.todoListForm{
+    float: left;
+}
+
+.todoListContent{
+    float: left;
+    width: 75%;
+    height: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    overflow-y: auto;
+}
+
+.todoListContentComponent{
+    height: 120px;
+    width: 240px;
+    border: 2px solid rgb(82,0,154);
+    border-radius: 2px;
+    margin-bottom: 10px;
+    background-color: rgba(52,0,154, .1);
+}
+.todoListContentComponentHeader{
+    margin: 0px 10px;
+    height: 20%;
+    border-bottom: 2px solid rgb(82,0,154);
+}
+
+.todoListContentComponentElement{
+    padding: 10px;
+    padding-left: 0px;
+    height: 80%;
+    width: 90%;
+    float:left;
+}
+
+.todoListContentComponentSidebar{
+    width: 10%;
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todoListDoneElement{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.todoListIsDoneElement{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    background-color: green;
+}
+
+.todoListDoneElement:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+.todoListIsDoneElement:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.todoListProgressElement{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.todoListInProgressElement{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255,255,0);
+}
+
+.todoListProgressElement:hover{
+    background-color: rgb(255,255,0);
+    cursor: pointer;
+}
+
+.todoListInProgressElement:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.todoListFutureElement{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.todoListInFutureElement{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+}
+
+.todoListFutureElement:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+
+.todoListInFutureElement:hover{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.todoListInputHeader{
+    width: 90%;
+    height: 100%;
+    padding-top: 2px;
+    border: none;
+    color: rgb(82,0,154);
+    background: none;
+    font-family: theFont;
+    float: left;
+    display: flex;
+}
+
+.todoListDeleteElement{
+    width: 10%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+
+.todoListDeleteElement:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+
+.todoListIsDoneElement:hover{
+    background-color: none;
+    cursor: pointer;
+}
+
+.todoListInputContent{
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: rgb(82,0,154);
+    background: none;
+    font-family: theFont;
+    resize: none;
+}
+
+.addTodoButton{
+    width: 100%;
+    border: 2px solid rgb(82,0,154);
+    color: rgb(82,0,154);
+    padding-left: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.todoListSidebarElement{
+    width: 100%;
+    border: 2px solid rgb(82,0,154);
+    border-top: none;
+    color: rgb(82,0,154);
+    padding-left: 15px;
+}
+
+.todoListSidebarElement:hover{
+    background-color: rgb(82,0,154);
+    color: black;
+    cursor: pointer;
+}
+
+
+input:focus {
+    outline: none !important;
+}
+textarea:focus {
+    outline: none !important;
+}
+
+/*/?-_-?:Workout:?-_-?/*/
+
+.workout{
+    height: 100%;
+    color: white;
+}
+
+.workout .sidebar{
+    width: 25%;
+    height: 100%;
+    border: 2px solid rgb(82,0,154);
+    border-top: none;
+    border-left: none;
+    float: left;
+}
+
+.workout .content{
+    background: none;
+    height: 100%;
+    width: 75%;
+}
+.element .sidebar{
+    width: 100%;
+    border: none;
+}
+.workoutName{
+    margin-left: 5px;
+}
+
+.workout .content textarea{
+    height: 100%;
+    width: 100%;
+    border: none;
+    resize: none;
+    float: left;
+}
+
+/*/?-_-?:Projects:?-_-?/*/
+
+.projects{
+    height: 100%;
+}
+
+.projects .sidebar{
+    width: 25%;
+    height: 100%;
+    border: 2px solid rgb(82,0,154);
+    border-top: none;
+    border-left: none;
+    float: left;
+}
+
+.projects .content{
+    background: none;
+    height: 100%;
+    width: 75%;
+}
+
+/*/?-_-?:Music:?-_-?/*/
+
+.music{
+    height: 100%;
+}
+
+.music .sidebar{
+    width: 25%;
+    height: 100%;
+    border: 2px solid rgb(82,0,154);
+    border-top: none;
+    border-reight: none;
+    float: left;
+}
+
+.music .content{
+    background: none;
+    height: 100%;
+    width: 75%;
+}
+.music .contentBox{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
